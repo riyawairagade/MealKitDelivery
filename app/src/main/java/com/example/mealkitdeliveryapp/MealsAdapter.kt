@@ -9,6 +9,10 @@ import com.example.mealkitdeliveryapp.db.Meal
 class MealsAdapter : RecyclerView.Adapter<MealsAdapter.ViewHolder>() {
 
     var data = listOf<Meal>()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MealsAdapter.ViewHolder {
         return ViewHolder(
